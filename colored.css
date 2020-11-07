@@ -164,7 +164,7 @@ body {
   display: none;
   top: 40%;
   position: fixed;
-  max-width: 100%;
+  max-width: 80%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
@@ -180,7 +180,7 @@ body {
 
 .tree_block {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   right: 5%;
 }
 
@@ -227,11 +227,11 @@ body {
   margin-right: 2vw;
   left: 50;
   right: 0;
-  top: 30%;
+  top: 35%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  width: 15vw;
-  height: 50vh;
+  max-width: 40%;
+  max-height: 80%;
   background: #D3BD9F;
   border: 1px solid #aaa;
   -webkit-box-shadow: 0 3px 15px 5px rgba(50, 50, 50, 0.15);
@@ -268,13 +268,13 @@ body {
 .my-profile {
   display: block;
   width: 100%;
-  height: 10vh;
+  height: 30%;
   text-align: left;
   -webkit-transition: .1s ease-in-out;
   transition: .1s ease-in-out;
   cursor: pointer;
   margin: 0 auto;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .my-profile > .thumb {
@@ -391,7 +391,7 @@ body {
 .history_text, .rules_text {
   display: block;
   font-size: 22pt;
-  margin: 10%;
+  margin: 20px;
 }
 
 #user-window > embed {
@@ -416,5 +416,21 @@ body {
   -webkit-animation: rising-sun 15s ease infinite;
   -moz-animation: rising-sun 15s ease infinite;
   -ms-animation: rising-sun 15s ease infinite;
+}
+
+@media screen and (max-width: 1400px) {
+  .building_block img {
+    max-width: 50%;
+  }
+  .tree_block img {
+    max-width: 15%;
+    top: 17%;
+  }
+  #user-window {
+    min-height: 40%;
+  }
+  #user-window > div.card-container > div.info p {
+    font-size: 10pt;
+  }
 }
 /*# sourceMappingURL=colored.css.map */
