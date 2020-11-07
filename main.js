@@ -19,6 +19,7 @@ $(document).ready(function(){
       fadein(popupWindow);
       fadein(BuildingBlock);
       fadein(MoonIcon);
+      fadein('.tree_block');
       fadeout('.btn_start_block');
       $('.btn_start_block').remove();
     })
