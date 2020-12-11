@@ -1,17 +1,11 @@
 
+@import "colores.scss";
 @import "pixelart.scss";
 @import "keyframes.scss";
 @import "menu.scss";
 @import "register.scss";
 
-$color_darkgrey: #40403E;
-$color_lightgrey: #969BA3;
-$color_dirtywhite: #E0E0E0;
-$color_dirtygreygreen: #6D7578;
-$color_asphalt: #ACAFB1;
-$color_red: #F44336;
 $size-half: 50%;
-// $pixel-size: 5px;
 
 * {
     margin: 0 auto;

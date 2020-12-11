@@ -1,8 +1,4 @@
-$darkgrey: #40403E;
-$lightgrey: #969BA3;
-$dirtywhite: #E0E0E0;
-$dirtygreygreen: #6D7578;
-$asphalt: #ACAFB1;
+@import "colores.scss";
 
 #toggle {
   display: none;
@@ -36,7 +32,7 @@ $asphalt: #ACAFB1;
 #toggle span:before {
   width: 100%;
   height: 5px;
-  background-color: $darkgrey;
+  background-color: $color_darkgrey;
   transition: all 0.3s;
   backface-visibility: hidden;
   border-radius: 2px;
@@ -64,17 +60,17 @@ $asphalt: #ACAFB1;
   position: absolute;
   right: 88px;
   top: 19px;
-  color: $darkgrey;
+  color: $color_darkgrey;
   width: 200px;
   padding: 10px;
   margin: auto;
   text-align: center;
   border-radius: 4px;
-  background: $dirtywhite;
+  background: $color_dirtywhite;
   opacity: 0;
   visibility: hidden;
   transition: opacity .4s;
-  box-shadow: 5px 5px $dirtygreygreen;
+  box-shadow: 5px 5px $color_dirtygreygreen;
 }
 #menu:after {
   position: absolute;
@@ -85,7 +81,7 @@ $asphalt: #ACAFB1;
   transform: rotate(90deg);
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
-  border-bottom: 20px solid $dirtywhite;
+  border-bottom: 20px solid $color_dirtywhite;
 }
 ul, li, li a {
   list-style: none;
@@ -95,12 +91,12 @@ ul, li, li a {
 }
 li a {
   padding: 5px;
-  color: $darkgrey;
+  color: $color_darkgrey;
   text-decoration: none;
   transition: all .2s;
 }
 li a:hover,
 li a:focus {
-  background: $lightgrey;
-  color: $dirtywhite;
+  background: $color_lightgrey;
+  color: $color_dirtywhite;
 }

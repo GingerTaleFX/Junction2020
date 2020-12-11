@@ -2,7 +2,8 @@
     "version": 3,
     "mappings": "AAqEA,AAAA,UAAU,CAAA;EACV,UAAU,EAAE,IAAI;EAChB,MAAM,EAAE,IAAI;EACZ,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,MAAM;EAClB,KAAK,EAAE,IAAI;CAOV;;AAJE,AAnBH,gBAmBS,AAnBR,MAAM,CAAA;EACL,OAAO,EAAE,EAAE;EACX,QAAQ,EAAE,QAAQ;EAClB,GAAG,EA3DQ,IAAG;EA4Dd,IAAI,EA5DO,IAAG;EA6Dd,KAAK,EA7DM,GAAG;EA8Dd,MAAM,EA9DK,GAAG;EA+Dd,UAAU,EAZF,ixIAAY;CAarB",
     "sources": [
-        "pixelart.scss"
+        "pixelart.scss",
+        "colores.scss"
     ],
     "names": [],
     "file": "pixelart.css"
