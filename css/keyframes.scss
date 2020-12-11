@@ -1,0 +1,39 @@
+// @import "style.scss";
+
+$color_darkgrey: #40403E;
+$color_lightgrey: #969BA3;
+$color_dirtywhite: #E0E0E0;
+$color_dirtygreygreen: #6D7578;
+$color_asphalt: #ACAFB1;
+
+@keyframes wave {
+	0% {
+		transform: scale(0);
+		opacity:1;
+		transform-origin: center;
+	}
+	100% {
+		transform: scale(1);
+		opacity:0;
+		transform-origin: center;
+	}
+}
+
+@keyframes rising-sun {
+    0%   { 
+        top: 80%; 
+        box-shadow: 0 0 20px 100px $color_dirtywhite;
+    }
+    50% {
+        top: 10%;
+        box-shadow: 0 0 150px 20px $color_dirtygreygreen;
+    }
+    75% {
+        top: 10%;
+        box-shadow: 0 0 150px 20px $color_dirtygreygreen;
+    }
+    100% {
+        top: 80%;
+        box-shadow: 0 0 150px 20px $color_dirtygreygreen;
+    }
+}

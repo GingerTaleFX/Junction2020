@@ -1,0 +1,82 @@
+// @import "style.scss";
+
+$pixel-size: 8px;
+$pixel-art: (
+  moon: (
+    (tr tr tr tr tr dg dg dg dg dg tr tr tr tr tr)
+    (tr tr tr dg dg dg dg dg dg dg dg dg tr tr tr)
+    (tr tr dg dg dg dg dg dg dg dg dg dg dg tr tr)
+    (tr dg dg dg dg dg dg dg dg dg dg dg dg dg tr)
+    (tr dg dg dg dg dg dg dg dg dg dg dg dg dg tr)
+    (dg dg tr tr tr dg dg dg dg dg tr tr tr dg dg)
+    (dg dg dg tr dg dg dg dg dg dg dg tr dg dg dg)
+    (dg dg dg tr dg dg dg dg dg dg dg tr dg dg dg)
+    (dg dg dg dg dg dg dg dg dg dg dg dg dg dg dg)
+    (dg dg dg dg dg dg tr tr tr dg dg dg dg dg dg)
+    (tr dg dg dg dg tr dg dg dg tr dg dg dg dg tr)
+    (tr dg dg dg tr dg dg dg dg dg tr dg dg dg tr)
+    (tr tr dg dg dg dg dg dg dg dg dg dg dg tr tr)
+    (tr tr tr dg dg dg dg dg dg dg dg dg tr tr tr)
+    (tr tr tr tr tr dg dg dg dg dg tr tr tr tr tr)
+  )
+);
+
+$pixel-color-map: (
+  'lg': #969BA3,
+  'dg': #40403E,
+  'tr': transparent,
+  'as': #ACAFB1,
+);
+
+@function pixelize($matrix, $size){
+  $l: length($matrix);
+  $sh: '';
+  $i: $l;
+
+  @for $i from 1 through $l{
+    $row: nth($matrix,$i);
+
+    @for $j from 1 through length($row){
+        $item: nth($row,$j);
+
+        @if map-has-key($pixel-color-map, $item) {
+          $sh:  $sh + ($j*$size) + ' ' + ($i*$size) + ' ' + map-get($pixel-color-map, $item);
+        } @else {
+          @warn 'there is no color specified in "$pixel-color-map" for: "#{$item}"';
+        }
+
+      @if not ($j == length($row) and $i == $l) {
+        $sh: $sh + ',';
+      }
+    }
+  }
+
+  @return unquote($sh);
+}
+
+@mixin style-item($matrix, $size){
+
+&:after{
+  content: '';
+  position: absolute;
+  top: (-$size);
+  left: (-$size);
+  width: $size;
+  height: $size;
+  box-shadow: pixelize($matrix,$size);
+}
+}
+
+.pixel-art{
+list-style: none;
+margin: auto;
+padding: 0;
+text-align: center;
+width: 100%;
+
+ @each $key, $value in $pixel-art{
+  &--#{$key}{
+    @include style-item($value, $pixel-size);
+  }
+}
+}

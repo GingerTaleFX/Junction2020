@@ -1,44 +1,20 @@
+
+@import "pixelart.scss";
+@import "keyframes.scss";
+@import "menu.scss";
+@import "register.scss";
+
 $color_darkgrey: #40403E;
 $color_lightgrey: #969BA3;
 $color_dirtywhite: #E0E0E0;
 $color_dirtygreygreen: #6D7578;
 $color_asphalt: #ACAFB1;
+$color_red: #F44336;
 $size-half: 50%;
+// $pixel-size: 5px;
 
 * {
     margin: 0 auto;
-}
-
-@keyframes wave {
-	0% {
-		transform: scale(0);
-		opacity:1;
-		transform-origin: center;
-	}
-	100% {
-		transform: scale(1.5);
-		opacity:0;
-		transform-origin: center;
-	}
-}
-
-@keyframes rising-sun {
-    0%   { 
-        top: 80%; 
-        box-shadow: 0 0 20px 100px $color_dirtywhite;
-    }
-    50% {
-        top: 10%;
-        box-shadow: 0 0 150px 20px $color_dirtygreygreen;
-    }
-    75% {
-        top: 10%;
-        box-shadow: 0 0 150px 20px $color_dirtygreygreen;
-    }
-    100% {
-        top: 80%;
-        box-shadow: 0 0 150px 20px $color_dirtygreygreen;
-    }
 }
 
 body {
@@ -76,6 +52,11 @@ body {
     position: fixed;
     max-width: 80%;
     transform: translateY(-50%);
+}
+
+audio {
+    max-width: 100%;
+    margin-top: 20px;
 }
 
 .btn_start_block{
@@ -117,10 +98,11 @@ body {
     margin-right: 2vw;
     left: 50;
     right: 0;
-    top: 35%;
+    top: 50%;
     transform: translateY(-50%);
-    max-width: 40%;
-    max-height: 80%;
+    padding: 10px;
+    max-width: 20%;
+    max-height: 50%;
     background: #ddd;
     border: 1px solid #aaa;
     box-shadow: 0 3px 15px 5px rgba(50, 50, 50, 0.15);
@@ -132,7 +114,8 @@ body {
     text-align: center;
 }
 .btn_connect {
-    border-radius: 5%;
+    border-radius: 5px;
+    max-width: 80%;
     background-color: $color_dirtywhite;
     border: 1px solid transparent;
     display: block;
@@ -147,41 +130,6 @@ body {
         text-decoration: none;
         color: $color_darkgrey;
     }
-}
-.my-profile {
-    display: block;
-    width: 100%;
-    height: 30%;
-    text-align: left;
-    transition: .1s ease-in-out;
-    cursor: pointer;
-    margin: 0 auto;
-    margin-top: 5%;
-    > .thumb {
-        display: block;
-        margin: 0 auto;
-        width:90px; 
-        height:90px; 
-        padding:4px; 
-        background:transparent; 
-        border-radius:50%; 
-        box-shadow:0 2px 8px rgba(0,0,0,0.3); 
-        z-index:1;
-    }
-}
-
-.thumb:before {
-    content:""; 
-    position:absolute; 
-    display:block; 
-    width:90px; 
-    height:90px; 
-    background:rgba(0, 0, 0, .6); 
-    border-radius:50%; 
-    z-index:1; 
-    backface-visibility:hidden; 
-    opacity:0; 
-    animation:wave 3s infinite ease-out;
 }
 
 .info {
@@ -221,7 +169,7 @@ body {
         }
         span.html {
             width:90%; 
-            background:#F44336; 
+            background:$color_red; 
         }
     }
 }
@@ -237,9 +185,9 @@ body {
     transform: translateY(-50%);
     width: 50%;
     height: 80%;
-    background: #ddd;
-    border: 1px solid #aaa;
-    box-shadow: 0  3px 15px 5px rgba(50,50,50,0.15);
+    background: $color_dirtywhite;
+    border: 1px solid $color_dirtygreygreen;
+    box-shadow: 0  3px 15px 5px $color_darkgrey;
 }
     
 .x-close {
@@ -248,6 +196,7 @@ body {
     float: right;
     margin-right: 12px;
     cursor: pointer;
+    padding-left: 15px;
 }
 
 .history_text, .rules_text {
@@ -255,6 +204,7 @@ body {
     font-size: 22pt;
     margin: 20px;
 }
+
 
 #user-window > embed {
     margin-top: 20px;
@@ -267,7 +217,8 @@ body {
     width: 100px;
     height: 100px;
     position: absolute;
-    background: $color_darkgrey;
+    background: transparent;
+    font-size: $pixel-size;
     border-radius: 50px;
     box-shadow: 0 0 20px $color_dirtygreygreen;
     left: 50%;

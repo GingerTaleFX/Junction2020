@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
     <title>MOLD</title>
 </head>
 <body>
@@ -15,11 +15,19 @@
             <div class="building_block" id="building">
                 <img src="./pics/building.png" alt="">
             </div>
+            <a href="#menu" id="toggle"><span></span></a>
+
+            <div id="menu">
+              <ul>
+                <li><a href="#History" id="history_trigger">History</a></li>
+                <li><a href="#Rules" id="rules_trigger">Rules</a></li>
+                <li><a href="#create_account" id="reg_trigger"> Create account</a></li>
+                <li><a href="#create_account"> Add University</a></li>
+                <li><a href="#create_account"> Add Google Fit</a></li>
+              </ul>
+            </div>
             <div id="user-window">
               <div class="card-container">
-                <div class="my-profile">
-                    <span class="thumb"><img src="#" alt="" /></span>
-                </div>
                 <div class="info">
                     <p class="level">1st Level</p>
                     <p class="name">Little Name</p>
@@ -30,14 +38,11 @@
                     <em>Energy</em>
                     <div><span class="html"></span></div>
                 </div>
+                <audio controls  loop autoplay>
+                    <source src="./music/change.mp3" type="audio/ogg">
+                    Your browser dose not Support the audio Tag
+                </audio>
               </div>
-                <button class="btn_connect first"><a href="#">Create account</a></button>
-                <button class="btn_connect"><a href="#">Add University account</a></button>
-                <button class="btn_connect"><a href="#">Add Google Fit</a></button>
-                <button class="btn_connect" id="history_trigger"><a href="#">History</a></button>
-                <button class="btn_connect" id="rules_trigger"><a href="#">Rules</a></button>
-                <embed src="./music/change.mp3" autostart="true" hidden="true" loop="true"> </embed>
-              
             </div>
             <div class="popup_window x-close" id="history">
                 <div class="popup-close_history">&times;
@@ -57,7 +62,7 @@
 
             </div>
             <div class="popup_window x-close" id="rules">
-                <div class="popup-close_rules">&times;
+                <div class="popup-close_rules"> &times;
                     <div class="rules_text">
                         <p>Rules are simple:</p>
                         <p>
@@ -69,10 +74,30 @@
                     </div>
                 </div>
             </div>
+            <!-- <div class="popup_window x-close register_bg" id="register"> -->
+                <!-- <div id="popup-close_register">  -->
+                    <div class="register" id="register">
+                        <div class="form">
+                            <span id="register_close" >&times;</span>
+                            <form class="register-form">
+                              <input type="text" placeholder="name"/>
+                              <input type="password" placeholder="password"/>
+                              <input type="text" placeholder="email address"/>
+                              <button>create</button>
+                              <p class="message">Already registered? <a href="#">Sign In</a></p>
+                            </form>
+                            <form class="login-form">
+                              <input type="text" placeholder="username"/>
+                              <input type="password" placeholder="password"/>
+                              <button>login</button>
+                              <p class="message">Not registered? <a href="#">Create an account</a></p>
+                            </form>
+                          </div>
+                    </div>
+                <!-- </div> -->
+            <!-- </div> -->
         </div>
-        <div class="moon" id="moon_visible">
-
-        </div>
+        <div class="pixel-art--moon moon" id="moon_visible"></div>
         <div class="land"></div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
