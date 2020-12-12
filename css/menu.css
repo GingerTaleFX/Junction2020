@@ -76,8 +76,8 @@
   visibility: hidden;
   -webkit-transition: opacity .4s;
   transition: opacity .4s;
-  -webkit-box-shadow: 5px 5px #6D7578;
-          box-shadow: 5px 5px #6D7578;
+  -webkit-box-shadow: 5px 5px #515557;
+          box-shadow: 5px 5px #515557;
 }
 
 #menu:after {

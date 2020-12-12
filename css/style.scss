@@ -42,10 +42,34 @@ body {
 .building_block {
     z-index: 3;
     display: none;
-    top: 40%;
+    left: 40px;
+    top: 30%;
     position: fixed;
     max-width: 80%;
     transform: translateY(-50%);
+}
+
+.tree_block {
+    display: none;
+    position: absolute;
+    z-index: 3;
+    top: 20%;
+}
+.forest {
+    display: block;
+    width: 100%;
+}
+
+body > div.wrapper > div.sky > div:nth-child(2) {
+    right: 20%;
+}
+
+body > div.wrapper > div.sky > div:nth-child(3) {
+    right: 35%;
+}
+
+body > div.wrapper > div.sky > div:nth-child(4) {
+    right: 50%;
 }
 
 audio {
@@ -90,40 +114,31 @@ audio {
     border-radius: 2%;
     display: none;
     margin-right: 2vw;
-    left: 50;
-    right: 0;
+    right: 40px;
     top: 50%;
     transform: translateY(-50%);
     padding: 10px;
     max-width: 20%;
     max-height: 50%;
-    background: #ddd;
+    background: $color_dirtywhite;
     border: 1px solid #aaa;
-    box-shadow: 0 3px 15px 5px rgba(50, 50, 50, 0.15);
+    box-shadow: 5px 5px $color_boxshadow;
+
   }
+
+#user_close {
+    position: absolute;
+    top: -35px;
+    right: -30px;
+    font-size: 50px;
+    line-height: 1;
+    cursor: pointer;
+}
 
 .card-container {
     display: block;
     width: 100%;
     text-align: center;
-}
-.btn_connect {
-    border-radius: 5px;
-    max-width: 80%;
-    background-color: $color_dirtywhite;
-    border: 1px solid transparent;
-    display: block;
-    cursor: pointer;
-    margin-top: 5%;
-    margin-left: 5%;
-    box-shadow:2px 1px 7px rgba(0,0,0,0.2);
-    .first {
-        margin-top: 20%;
-    }
-    a {
-        text-decoration: none;
-        color: $color_darkgrey;
-    }
 }
 
 .info {
@@ -214,14 +229,11 @@ audio {
     background: $color_dirtywhite;
     font-size: $pixel-size;
     border-radius: 50px;
-    // box-shadow: 0 0 20px $color_dirtygreygreen;
     left: 50%;
     top: 80%;
     margin: 0 -50px;
     z-index: 1;
     animation: rising-sun 15s ease infinite;
-    // -moz-animation:    rising-sun 15s ease infinite;
-    // -ms-animation:     rising-sun 15s ease infinite;
 }
 
 @media screen and (max-width: 1400px){

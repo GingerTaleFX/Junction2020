@@ -1,6 +1,9 @@
 @import "colores.scss";
 
 $pixel-size: 8px;
+$big-pixel-size: 20px;
+$forest-pixel: 12px;
+
 $pixel-art: (
   moon: (
     (tr tr tr tr tr dg dg dg dg dg tr tr tr tr tr)
@@ -18,14 +21,89 @@ $pixel-art: (
     (tr tr dg dg dg dg dg dg dg dg dg dg dg tr tr)
     (tr tr tr dg dg dg dg dg dg dg dg dg tr tr tr)
     (tr tr tr tr tr dg dg dg dg dg tr tr tr tr tr)
+  ),
+  sun: (
+    (tr tr tr tr tr y y y y y tr tr tr tr tr)
+    (tr tr tr y y y y y y y y y tr tr tr)
+    (tr tr y y y y y y y y y y y tr tr)
+    (tr y y y y y y y y y y y y y tr)
+    (tr y y y y y y y y y y y y y tr)
+    (y y tr tr tr y y y y y tr tr tr y y)
+    (y y y tr y y y y y y y tr y y y)
+    (y y y tr y y y y y y y tr y y y)
+    (y y y y y y y y y y y y y y y)
+    (y y y y tr y y y y y tr y y y y)
+    (tr y y y y tr y y y tr y y y y tr)
+    (tr y y y y y tr tr tr y y y y y tr)
+    (tr tr y y y y y y y y y y y tr tr)
+    (tr tr tr y y y y y y y y y tr tr tr)
+    (tr tr tr tr tr y y y y y tr tr tr tr tr)
+  ),
+  house: (
+    (tr tr tr tr tr tr tr tr tr tr tr tr tr tr tr tr tr tr)
+    (tr tr tr tr tr lg lg tr tr tr tr tr tr tr tr tr tr tr)
+    (tr tr tr tr tr lg lg tr tr tr tr tr tr tr tr tr tr tr)
+    (tr tr tr tr dg dg dg dg dg dg dg dg dg dg tr tr tr tr)
+    (tr tr tr dg dg dg dg dg dg dg dg dg dg dg dg tr tr tr)
+    (tr tr dg dg dg dg dg dg dg dg dg dg dg dg dg dg tr tr)
+    (tr dg dg dg dg dg dg dg dg dg dg dg dg dg dg dg dg tr)
+    (tr tr lg lg lg lg lg lg lg tr tr tr dg tr dg tr tr tr)
+    (tr tr dg g2 dg dg g2 g2 dg tr tr tr dg tr dg tr tr tr)
+    (tr tr lg g2 lg lg g2 g2 lg tr tr tr dg tr dg tr tr tr)
+    (tr tr dg dg dg dg dg dg dg dg dg dg dg dg dg dg tr tr)
+    (tr tr lg lg lg lg lg lg lg tr dg tr dg tr dg tr tr tr)
+    (tr tr dg dg dg dg dg dg dg dg dg dg dg dg dg dg dg tr)
+    (tr tr lg lg lg lg lg lg lg lg lg lg lg lg lg lg lg lg)
+  ),
+  stranger: (
+    (tr dg dg lg tr tr tr tr dg dg tr tr tr dg dg dg tr tr tr dg dg tr tr)
+    (tr tr dg dg tr tr tr dg dg lg tr tr tr lg dg dg tr tr tr dg dg tr dg)
+    (tr lg dg dg dg tr tr lg dg dg tr tr tr dg dg lg tr tr tr tr dg tr dg)
+    (tr tr tr dg dg lg tr dg dg dg lg tr tr tr dg dg lg tr tr lg dg dg tr)
+    (tr tr lg lg dg dg lg dg dg lg lg tr tr lg dg dg dg lg tr dg dg dg lg)
+    (tr lg lg dg dg dg dg dg dg dg lg lg lg dg dg lg dg dg lg dg dg dg tr)
+    (lg lg dg dg dg lg dg dg dg dg dg dg dg dg lg dg lg dg dg dg dg dg lg)
+    (tr lg dg dg lg lg lg dg dg dg lg lg lg dg dg lg dg dg lg dg dg dg lg)
+  ),
+  forest: (
+    (tr tr tr tr tr tr tr tr tr tr tr tr tr tr tr tr tr)
+    (tr tr tr tr tr tr tr tr dg tr tr tr tr tr tr tr tr)
+    (tr tr tr tr tr tr tr dg dg dg tr tr tr tr tr tr tr)
+    (tr tr tr tr tr tr dg dg dg tr dg tr tr tr tr tr tr)
+    (tr tr tr tr dg dg dg dg dg dg dg dg dg tr tr tr tr)
+    (tr tr tr dg dg dg dg dg dg dg dg tr dg dg tr tr tr)
+    (tr tr dg dg dg dg dg dg dg dg dg dg dg dg dg tr tr)
+    (tr dg dg dg dg dg dg dg dg dg dg dg dg dg dg dg tr)
+    (tr dg dg dg dg dg dg dg dg dg dg dg dg dg dg dg tr)
+    (dg tr dg dg dg dg dg dg dg dg dg dg dg dg dg dg dg)
+    (tr dg dg dg dg dg dg dg dg dg dg dg dg dg dg dg tr)
+    (tr tr dg dg dg dg dg dg dg dg dg dg dg dg dg tr dg)
+    (tr tr dg g2 dg dg dg dg dg dg dg g2 dg dg tr dg tr)
+    (tr tr tr dg g2 dg dg dg dg dg g2 dg dg dg dg dg tr)
+    (tr tr tr dg g2 g2 dg dg dg g2 g2 dg dg tr dg tr tr)
+    (tr tr tr tr dg g2 dg dg dg g2 dg dg g2 dg tr tr tr)
+    (tr tr tr tr tr dg g2 dg g2 dg dg g2 dg tr tr tr tr)
+    (tr tr tr tr tr tr g2 g2 g2 g2 g2 tr tr tr tr tr tr)
+    (tr tr tr tr tr tr tr g2 g2 g2 g2 tr tr tr tr tr tr)
+    (tr tr tr tr tr tr tr tr g2 g2 tr tr tr tr tr tr tr)
+    (tr tr tr tr tr tr tr g2 g2 g2 tr tr tr tr tr tr tr)
+    (tr tr tr tr tr tr tr tr g2 g2 g2 tr tr tr tr tr tr)
+    (tr tr tr tr tr tr tr tr g2 g2 tr tr tr tr tr tr tr)
+    (tr tr tr tr tr tr g2 g2 g2 g2 tr tr tr tr tr tr tr)
+    (tr tr tr tr g2 g2 g2 g2 g2 g2 g2 g2 g2 tr tr tr tr)
+    (tr tr tr tr g2 tr g2 g2 tr g2 g2 tr g2 tr tr tr tr)
   )
 );
 
 $pixel-color-map: (
-  'lg': #969BA3,
-  'dg': #40403E,
+  'lg': $color_lightgrey2,
+  'dg': $color_darkgrey,
+  'g2': $color_grey2,
   'tr': transparent,
-  'as': #ACAFB1,
+  'as': $color_asphalt,
+  'y': $color_yellow,
+  'p': #D6C2DC,
+  'g': #CADAB0,
 );
 
 @function pixelize($matrix, $size){
@@ -80,3 +158,30 @@ width: 100%;
   }
 }
 }
+.big-pixel-art{
+  list-style: none;
+  margin: auto;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  
+   @each $key, $value in $pixel-art{
+    &--#{$key}{
+      @include style-item($value, $big-pixel-size);
+    }
+  }
+  }
+
+.forest-pixel-art{
+  list-style: none;
+  margin: auto;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  
+   @each $key, $value in $pixel-art{
+    &--#{$key}{
+      @include style-item($value, $forest-pixel);
+    }
+  }
+  }

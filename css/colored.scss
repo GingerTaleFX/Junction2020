@@ -1,11 +1,13 @@
-$color_darkgrey: #40403E;
-$color_lightblue:#8192B3;
-$color_dirtywhite: #E0E0E0;
-$color_sand: #D3BD9F;
-$color_yellow: #E0E0A9;
-$color_lightpink: #D6C2DC;
-$color_lightgreen: #CADAB0;
-$color_asphalt: #ACAFB1;
+@import "colores.scss";
+
+// $color_darkgrey: #40403E;
+// $color_lightblue:#8192B3;
+// $color_dirtywhite: #E0E0E0;
+// $color_sand: #D3BD9F;
+// $color_yellow: #E0E0A9;
+// $color_lightpink: #D6C2DC;
+// $color_lightgreen: #CADAB0;
+// $color_asphalt: #ACAFB1;
 $size-half: 50%;
 
 * {

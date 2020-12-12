@@ -18,7 +18,7 @@ $(document).ready(function(){
     }
    
     $('#popup-trigger').on('click touchend', function(){
-      fadein(popupWindow);
+      // fadein(popupWindow);
       fadein(BuildingBlock);
       fadein(MoonIcon);
       fadein("#toggle");
@@ -38,6 +38,10 @@ $(document).ready(function(){
         fadein(RegisterWindow);
     })
 
+    $('#user_trigger').on('click touched', function() {
+      fadein('#user-window');
+    });
+
     $('.popup-close_history').on('click touchend', function() {
       fadeout(HistoryWindow);
     });
@@ -46,9 +50,12 @@ $(document).ready(function(){
         fadeout(RulesWindow);
       });
 
-      $('#register_close').on('click touched', function() {
-        fadeout(RegisterWindow);
-      })
+    $('#register_close').on('click touched', function() {
+      fadeout(RegisterWindow);
+    });
+    $('#user_close').on('click touched', function(){
+      fadeout('#user-window');
+    });
    
     $(document).on('keyup', function(e) {
         if (e.keyCode == 27) { // (escape key)
