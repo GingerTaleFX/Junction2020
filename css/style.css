@@ -59,18 +59,18 @@
   }
   50% {
     top: 10%;
-    -webkit-box-shadow: 0 0 150px 20px #6D7578;
-            box-shadow: 0 0 150px 20px #6D7578;
+    -webkit-box-shadow: 0 0 150px 80px #E0E0E0;
+            box-shadow: 0 0 150px 80px #E0E0E0;
   }
   75% {
     top: 10%;
-    -webkit-box-shadow: 0 0 150px 20px #6D7578;
-            box-shadow: 0 0 150px 20px #6D7578;
+    -webkit-box-shadow: 0 0 150px 80px #E0E0E0;
+            box-shadow: 0 0 150px 80px #E0E0E0;
   }
   100% {
     top: 80%;
-    -webkit-box-shadow: 0 0 150px 20px #6D7578;
-            box-shadow: 0 0 150px 20px #6D7578;
+    -webkit-box-shadow: 0 0 150px 80px #E0E0E0;
+            box-shadow: 0 0 150px 80px #E0E0E0;
   }
 }
 
@@ -82,18 +82,18 @@
   }
   50% {
     top: 10%;
-    -webkit-box-shadow: 0 0 150px 20px #6D7578;
-            box-shadow: 0 0 150px 20px #6D7578;
+    -webkit-box-shadow: 0 0 150px 80px #E0E0E0;
+            box-shadow: 0 0 150px 80px #E0E0E0;
   }
   75% {
     top: 10%;
-    -webkit-box-shadow: 0 0 150px 20px #6D7578;
-            box-shadow: 0 0 150px 20px #6D7578;
+    -webkit-box-shadow: 0 0 150px 80px #E0E0E0;
+            box-shadow: 0 0 150px 80px #E0E0E0;
   }
   100% {
     top: 80%;
-    -webkit-box-shadow: 0 0 150px 20px #6D7578;
-            box-shadow: 0 0 150px 20px #6D7578;
+    -webkit-box-shadow: 0 0 150px 80px #E0E0E0;
+            box-shadow: 0 0 150px 80px #E0E0E0;
   }
 }
 
@@ -523,18 +523,15 @@ audio {
   width: 100px;
   height: 100px;
   position: absolute;
-  background: transparent;
+  background: #E0E0E0;
   font-size: 8px;
   border-radius: 50px;
-  -webkit-box-shadow: 0 0 20px #6D7578;
-          box-shadow: 0 0 20px #6D7578;
   left: 50%;
   top: 80%;
   margin: 0 -50px;
   z-index: 1;
   -webkit-animation: rising-sun 15s ease infinite;
-  -moz-animation: rising-sun 15s ease infinite;
-  -ms-animation: rising-sun 15s ease infinite;
+          animation: rising-sun 15s ease infinite;
 }
 
 @media screen and (max-width: 1400px) {

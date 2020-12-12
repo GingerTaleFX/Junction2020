@@ -211,17 +211,17 @@ audio {
     width: 100px;
     height: 100px;
     position: absolute;
-    background: transparent;
+    background: $color_dirtywhite;
     font-size: $pixel-size;
     border-radius: 50px;
-    box-shadow: 0 0 20px $color_dirtygreygreen;
+    // box-shadow: 0 0 20px $color_dirtygreygreen;
     left: 50%;
     top: 80%;
     margin: 0 -50px;
     z-index: 1;
-    -webkit-animation: rising-sun 15s ease infinite;
-    -moz-animation:    rising-sun 15s ease infinite;
-    -ms-animation:     rising-sun 15s ease infinite;
+    animation: rising-sun 15s ease infinite;
+    // -moz-animation:    rising-sun 15s ease infinite;
+    // -ms-animation:     rising-sun 15s ease infinite;
 }
 
 @media screen and (max-width: 1400px){
